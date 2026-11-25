@@ -1,0 +1,35 @@
+{
+  "protocol": "chavis_general_v2_2_20261019",
+  "cohort": "example_ni111_ch3",
+  "reactions": [
+    "D02"
+  ],
+  "reaction_count": 1,
+  "parent_species": [
+    "CH3"
+  ],
+  "parent_species_count": 1,
+  "execution_equations": {
+    "D02": "CH3* -> CH2* + H*"
+  },
+  "wf2_azimuth_argument": [
+    "--adsorption-azimuth-step-deg",
+    "auto"
+  ],
+  "seed": 1,
+  "seed_semantics": "execution replicate label; frozen RDKit embedding seed 61453",
+  "model_revision": "f611b917d9c68566bbbeccbb0aa0f7cad1696cb2",
+  "model_processes": 1,
+  "surface": {
+    "argument": "Ni:fcc111",
+    "key": "Ni_fcc111",
+    "element": "Ni",
+    "facet": "fcc111"
+  },
+  "surface_cache": null,
+  "surface_preparation_accounting": "separate EOS and clean slab stage; run-local cache for additional surfaces",
+  "search_scope": "first_success",
+  "preparation_reaction_scope": "requested cohort IDs for each parent species",
+  "external_reactants": null,
+  "model_loaded": false
+}
