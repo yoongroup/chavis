@@ -1,0 +1,266 @@
+{
+ "CH4": {
+  "smiles": "C",
+  "mode": "free:C",
+  "references": [
+   "C",
+   "COM"
+  ],
+  "seed_families": [
+   "one_H_down",
+   "two_H_down",
+   "three_H_down"
+  ],
+  "placeholder": false
+ },
+ "CO2": {
+  "smiles": "O=C=O",
+  "mode": "free:C",
+  "references": [
+   "C",
+   "O1",
+   "O2",
+   "COM"
+  ],
+  "seed_families": [
+   "linear",
+   "C_facing_bent",
+   "O_facing_bent",
+   "lying_multicontact"
+  ],
+  "O_C_O_angle_seed_deg": [
+   180.0,
+   150.0,
+   130.0
+  ],
+  "placeholder": false,
+  "note": "Angles are seed proposals and are not fixed during optimization. No arbitrary -1 charge; no COClOH workaround."
+ },
+ "CO": {
+  "smiles": "[C-]#[O+]",
+  "mode": "free:C",
+  "references": [
+   "C",
+   "O",
+   "midpoint"
+  ],
+  "seed_families": [
+   "C_down",
+   "O_down",
+   "lying"
+  ],
+  "placeholder": false,
+  "note": "Both C-down and O-down are required; calling free:C alone is not a C-down implementation."
+ },
+ "H2O": {
+  "smiles": "O",
+  "mode": "free:O",
+  "references": [
+   "O",
+   "COM"
+  ],
+  "seed_families": [
+   "O_facing",
+   "H_facing",
+   "tilted",
+   "lying"
+  ],
+  "placeholder": false,
+  "atom_template": {
+   "atoms": {
+    "O": "O",
+    "H_a": "H",
+    "H_b": "H"
+   },
+   "edges": [
+    [
+     "O",
+     "H_a"
+    ],
+    [
+     "O",
+     "H_b"
+    ]
+   ]
+  }
+ },
+ "H2": {
+  "smiles": "[H][H]",
+  "mode": "free:H",
+  "references": [
+   "midpoint"
+  ],
+  "seed_families": [
+   "parallel",
+   "perpendicular",
+   "tilted"
+  ],
+  "placeholder": false,
+  "note": "The midpoint adapter selects the midpoint; free:H selects the first H."
+ },
+ "CH2O": {
+  "smiles": "C=O",
+  "mode": "free:C",
+  "references": [
+   "C",
+   "O",
+   "CO_midpoint"
+  ],
+  "seed_families": [
+   "C_facing",
+   "O_facing",
+   "lying_multicontact"
+  ],
+  "placeholder": false,
+  "default_type": "T2",
+  "routing_reason": "Search avoids constraining binding to a single Cl placeholder. No weak-adsorption assumption for CH2O; stable parents may be reused."
+ },
+ "CH3": {
+  "smiles": "ClC",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true,
+  "atom_template": {
+   "atoms": {
+    "C": "C",
+    "H_a": "H",
+    "H_b": "H",
+    "H_c": "H"
+   },
+   "edges": [
+    [
+     "C",
+     "H_a"
+    ],
+    [
+     "C",
+     "H_b"
+    ],
+    [
+     "C",
+     "H_c"
+    ]
+   ]
+  }
+ },
+ "CH2": {
+  "smiles": "ClCCl",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true,
+  "atom_template": {
+   "atoms": {
+    "C": "C",
+    "H_a": "H",
+    "H_b": "H"
+   },
+   "edges": [
+    [
+     "C",
+     "H_a"
+    ],
+    [
+     "C",
+     "H_b"
+    ]
+   ]
+  }
+ },
+ "CH": {
+  "smiles": "ClC(Cl)Cl",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true
+ },
+ "CHO": {
+  "smiles": "ClC=O",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true
+ },
+ "OH": {
+  "smiles": "ClO",
+  "mode": "Cl",
+  "binder_element": "O",
+  "placeholder": true,
+  "atom_template": {
+   "atoms": {
+    "O": "O",
+    "H": "H"
+   },
+   "edges": [
+    [
+     "O",
+     "H"
+    ]
+   ]
+  }
+ },
+ "CH3O": {
+  "smiles": "COCl",
+  "mode": "Cl",
+  "binder_element": "O",
+  "placeholder": true,
+  "note": "O is the surface binder; separate from the C-H cleavage reaction anchor (C)."
+ },
+ "CHOH": {
+  "smiles": "ClC(Cl)O",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true,
+  "initial_site": "bridge",
+  "note": "Two removable Cl orientation markers on C; OH and C-H retained. Bridge is an input hypothesis, not a validated final site. Explicit eta2 CHO is not included."
+ },
+ "COH": {
+  "smiles": "ClC(Cl)(Cl)O",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true,
+  "initial_site": "fcc",
+  "note": "Three removable Cl orientation markers on C; O-H retained. Hollow is an input hypothesis, not a validated final site."
+ },
+ "C": {
+  "smiles": "[C]",
+  "mode": "free:C",
+  "references": [
+   "C"
+  ],
+  "placeholder": false
+ },
+ "O": {
+  "smiles": "[O]",
+  "mode": "free:O",
+  "references": [
+   "O"
+  ],
+  "placeholder": false,
+  "atom_template": {
+   "atoms": {
+    "O": "O"
+   },
+   "edges": []
+  }
+ },
+ "H": {
+  "smiles": "[H]",
+  "mode": "free:H",
+  "references": [
+   "H"
+  ],
+  "placeholder": false
+ },
+ "COOH": {
+  "smiles": "ClC(=O)O",
+  "mode": "Cl",
+  "binder_element": "C",
+  "placeholder": true,
+  "note": "RWGS carboxyl: C binds; one removable Cl marker on C"
+ },
+ "HCOO": {
+  "smiles": "O=COCl",
+  "mode": "Cl",
+  "binder_element": "O",
+  "placeholder": true,
+  "note": "RWGS formate: O binds; generalized orientations include bidentate O,O binding."
+ }
+}

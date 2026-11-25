@@ -1,0 +1,19 @@
+{
+  "name": "uma-s-1p2p1",
+  "task": "oc20",
+  "revision": "f611b917d9c68566bbbeccbb0aa0f7cad1696cb2",
+  "assets": {
+    "checkpoints/uma-s-1p2p1.pt": {
+      "sha256": "b2673b85037b075674c25f55c34ffe1ff1e15db924be977b10a184765df0d5ce",
+      "bytes": 2333393615
+    },
+    "references/iso_atom_elem_refs.yaml": {
+      "sha256": "8d6b57a33c6a139f80cd706f253a030bd9d93cbfb1bbe33fba066e23b7e8c29e",
+      "bytes": 9000
+    },
+    "references/form_elem_refs.yaml": {
+      "sha256": "6de4f5105106bbb31fdc04b3fa215c50d379f043f3b6527e287475a3c2255c75",
+      "bytes": 11770
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "search_scope": "all_pairs",
+  "order_mode": "demote_product_detached",
+  "form_basis": "final_relaxed_binding_form",
+  "staying_fragment_max_displacement_A": 1.0,
+  "max_deferrals_per_pair": 1,
+  "scan_jump_window_points": 3,
+  "scan_jump_defer_eV": 0.8,
+  "bond_prior_scale": 1.5,
+  "seeds_per_visit": 3,
+  "resumes_per_visit": 3,
+  "dimer_screen_steps": 300,
+  "dimer_max_steps": 1500,
+  "first_validated_min_share": 0.01,
+  "prescan_all_pairs": false,
+  "lazy_products": false,
+  "light_acceptance": false,
+  "adsorption_azimuth_step_deg": "auto"
+}

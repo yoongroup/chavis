@@ -1,0 +1,25 @@
+{
+  "status": "partial_historical_pins",
+  "python": "3.12.3",
+  "recorded_packages": {
+    "ase": "3.29.0",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "torch": "2.13.0+cu130",
+    "fairchem-core": "2.22.0",
+    "rdkit": "2026.03.6",
+    "e3nn": "0.6.0",
+    "pymatgen": "2026.9.24"
+  },
+  "torch_recorded_runtime_version": "2.13.0+cu130",
+  "torch_recorded_distribution_version": "2.13.0",
+  "torch_version_distinction": "Historical slab metadata and attempt distribution metadata differ; do not relax replay environment matching on this basis. Confirm both values from the execution environment.",
+  "complete_transitive_lock": false,
+  "unverified": [
+    "Current execution environment",
+    "Complete dependency resolution and wheel availability",
+    "Matplotlib version used for final artwork",
+    "GPU driver and full platform identity"
+  ],
+  "model_assets": "Separately supplied; not redistributed by this package."
+}

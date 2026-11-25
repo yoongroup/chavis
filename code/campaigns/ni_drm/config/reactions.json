@@ -1,0 +1,608 @@
+{
+ "state_class_definition": {
+  "adsorbed_to_adsorbed": "IS and FS are both adsorbed on the metal",
+  "may_detach_to_adsorbed": "IS may be a detached or weakly bound molecule (CH4, CO2, H2O, H2); FS is adsorbed",
+  "source": "FS is adsorbed for all 15 primary reactions"
+ },
+ "schema_version": 2,
+ "metal": "Ni",
+ "count": 30,
+ "reactions": [
+  {
+   "id": "A01",
+   "category": "ADSORPTION",
+   "equation": "CH4(g) + * -> CH4*",
+   "default_route": "T1",
+   "parent_species": "CH4",
+   "broken_bond_elements": null,
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "A02",
+   "category": "ADSORPTION",
+   "equation": "CO2(g) + * -> CO2*",
+   "default_route": "T1",
+   "parent_species": "CO2",
+   "broken_bond_elements": null,
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "A03",
+   "category": "ADSORPTION",
+   "equation": "CO(g) + * -> CO*",
+   "default_route": "T1",
+   "parent_species": "CO",
+   "broken_bond_elements": null,
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "A04",
+   "category": "ADSORPTION",
+   "equation": "H2O(g) + * -> H2O*",
+   "default_route": "T1",
+   "parent_species": "H2O",
+   "broken_bond_elements": null,
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "A05",
+   "category": "ADSORPTION",
+   "equation": "H2(g) + * -> H2*",
+   "default_route": "T1",
+   "parent_species": "H2",
+   "broken_bond_elements": null,
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D01",
+   "state_class": "may_detach_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CH4* -> CH3* + H*",
+   "default_route": "T2",
+   "parent_species": "CH4",
+   "broken_bond_elements": "C-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D02",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CH3* -> CH2* + H*",
+   "default_route": "T0-H",
+   "parent_species": "CH3",
+   "broken_bond_elements": "C-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D03",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CH2* -> CH* + H*",
+   "default_route": "T0-H",
+   "parent_species": "CH2",
+   "broken_bond_elements": "C-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D04",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CH* -> C* + H*",
+   "default_route": "T0-H",
+   "parent_species": "CH",
+   "broken_bond_elements": "C-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D05",
+   "state_class": "may_detach_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CO2* -> CO* + O*",
+   "default_route": "T2",
+   "parent_species": "CO2",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D06",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CHO* -> CO* + H*",
+   "default_route": "T0-H",
+   "parent_species": "CHO",
+   "broken_bond_elements": "C-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D07",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "OH* -> O* + H*",
+   "default_route": "T0-H",
+   "parent_species": "OH",
+   "broken_bond_elements": "O-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D08",
+   "state_class": "may_detach_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "H2O* -> OH* + H*",
+   "default_route": "T2",
+   "parent_species": "H2O",
+   "broken_bond_elements": "O-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D09",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CO* -> C* + O*",
+   "default_route": "T0-F",
+   "parent_species": "CO",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D10",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CHO* -> CH* + O*",
+   "default_route": "T0-F",
+   "parent_species": "CHO",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "D11",
+   "category": "DISSOCIATION",
+   "equation": "CH2O* -> CHO* + H*",
+   "default_route": "T2",
+   "parent_species": "CH2O",
+   "broken_bond_elements": "C-H",
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true,
+   "routing_rationale_key": "CH2O_TYPE2_REASON"
+  },
+  {
+   "id": "D12",
+   "category": "DISSOCIATION",
+   "equation": "CH2O* -> CH2* + O*",
+   "default_route": "T2",
+   "parent_species": "CH2O",
+   "broken_bond_elements": "C-O",
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true,
+   "routing_rationale_key": "CH2O_TYPE2_REASON"
+  },
+  {
+   "id": "D13",
+   "state_class": "may_detach_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "H2* -> H* + H*",
+   "default_route": "T2",
+   "parent_species": "H2",
+   "broken_bond_elements": "H-H",
+   "enabled": true,
+   "route_is_search_policy_not_binding_strength": true
+  },
+  {
+   "id": "X01",
+   "category": "DISSOCIATION",
+   "equation": "CH3O* -> CH2O* + H*",
+   "default_route": "T0-H",
+   "parent_species": "CH3O",
+   "broken_bond_elements": "C-H",
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true,
+   "surface_binder": "O",
+   "reaction_anchor": "C",
+   "moving_fragment": "H",
+   "retained_fragment": "CH2O"
+  },
+  {
+   "id": "X02",
+   "category": "DISSOCIATION",
+   "equation": "CH3O* -> CH3* + O*",
+   "default_route": "T0-F",
+   "parent_species": "CH3O",
+   "broken_bond_elements": "C-O",
+   "enabled": false,
+   "route_is_search_policy_not_binding_strength": true,
+   "surface_binder": "O",
+   "reaction_anchor": "O",
+   "moving_fragment": "CH3",
+   "retained_fragment": "O"
+  },
+  {
+   "id": "N01",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "CHOH* -> CHO* + H*",
+   "default_route": "T0-H",
+   "parent_species": "CHOH",
+   "broken_bond_elements": "O-H",
+   "enabled": true,
+   "requested_direction": "dissociation",
+   "surface_binder": "C",
+   "reaction_anchor": "O",
+   "moving_fragment": "H",
+   "retained_fragment": "CHO"
+  },
+  {
+   "id": "N02",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "DISSOCIATION",
+   "equation": "COH* -> CO* + H*",
+   "default_route": "T0-H",
+   "parent_species": "COH",
+   "broken_bond_elements": "O-H",
+   "enabled": true,
+   "requested_direction": "dissociation",
+   "surface_binder": "C",
+   "reaction_anchor": "O",
+   "moving_fragment": "H",
+   "retained_fragment": "CO"
+  },
+  {
+   "id": "N03",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "ASSOCIATION",
+   "equation": "CH* + OH* -> CHOH*",
+   "default_route": "T0-F",
+   "parent_species": "CHOH",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "requested_direction": "association",
+   "computational_direction": "CHOH* -> CH* + OH*",
+   "surface_binder": "C",
+   "reaction_anchor": "C",
+   "moving_fragment": "OH",
+   "retained_fragment": "CH"
+  },
+  {
+   "id": "N04",
+   "state_class": "adsorbed_to_adsorbed",
+   "category": "ASSOCIATION",
+   "equation": "C* + OH* -> COH*",
+   "default_route": "T0-F",
+   "parent_species": "COH",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "requested_direction": "association",
+   "computational_direction": "COH* -> C* + OH*",
+   "surface_binder": "C",
+   "reaction_anchor": "C",
+   "moving_fragment": "OH",
+   "retained_fragment": "C"
+  },
+  {
+   "id": "R01",
+   "category": "RWGS",
+   "equation": "CO2* + H* -> COOH*",
+   "default_route": "T0-H",
+   "parent_species": "COOH",
+   "broken_bond_elements": "O-H",
+   "enabled": true,
+   "requested_direction": "association",
+   "computational_direction": "COOH* -> CO2* + H*",
+   "surface_binder": "C",
+   "reaction_anchor": "O",
+   "moving_fragment": "H",
+   "retained_fragment": "CO2",
+   "state_class": "adsorbed_to_adsorbed"
+  },
+  {
+   "id": "R02",
+   "category": "RWGS",
+   "equation": "COOH* -> CO* + OH*",
+   "default_route": "T0-F",
+   "parent_species": "COOH",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "requested_direction": "dissociation",
+   "surface_binder": "C",
+   "reaction_anchor": "C",
+   "moving_fragment": "OH",
+   "retained_fragment": "CO",
+   "state_class": "adsorbed_to_adsorbed"
+  },
+  {
+   "id": "R03",
+   "category": "RWGS",
+   "equation": "CO2* + H* -> HCOO*",
+   "default_route": "T0-H",
+   "parent_species": "HCOO",
+   "broken_bond_elements": "C-H",
+   "enabled": true,
+   "requested_direction": "association",
+   "computational_direction": "HCOO* -> CO2* + H*",
+   "surface_binder": "O",
+   "reaction_anchor": "C",
+   "moving_fragment": "H",
+   "retained_fragment": "CO2",
+   "state_class": "adsorbed_to_adsorbed"
+  },
+  {
+   "id": "R04",
+   "category": "RWGS",
+   "equation": "HCOO* -> CHO* + O*",
+   "default_route": "T0-F",
+   "parent_species": "HCOO",
+   "broken_bond_elements": "C-O",
+   "enabled": true,
+   "requested_direction": "dissociation",
+   "surface_binder": "O",
+   "reaction_anchor": "C",
+   "moving_fragment": "O",
+   "retained_fragment": "CHO",
+   "state_class": "adsorbed_to_adsorbed"
+  },
+  {
+   "entry_schema_version": 2,
+   "id": "T01",
+   "category": "H_TRANSFER",
+   "equation": "CH3* + O* -> CH2* + OH*",
+   "enabled": true,
+   "pipeline": "coadsorbed_two_sided",
+   "default_route": "two_sided_single_bond_scan",
+   "requested_direction": "forward",
+   "state_class": "adsorbed_to_adsorbed",
+   "atom_order": [
+    "C1",
+    "H1",
+    "H2",
+    "Ht",
+    "O1"
+   ],
+   "reactants": [
+    {
+     "instance": "r_ch3",
+     "species": "CH3",
+     "phase": "adsorbed",
+     "atom_map": {
+      "C": "C1",
+      "H_a": "H1",
+      "H_b": "H2",
+      "H_c": "Ht"
+     }
+    },
+    {
+     "instance": "r_o",
+     "species": "O",
+     "phase": "adsorbed",
+     "atom_map": {
+      "O": "O1"
+     }
+    }
+   ],
+   "products": [
+    {
+     "instance": "p_ch2",
+     "species": "CH2",
+     "phase": "adsorbed",
+     "atom_map": {
+      "C": "C1",
+      "H_a": "H1",
+      "H_b": "H2"
+     }
+    },
+    {
+     "instance": "p_oh",
+     "species": "OH",
+     "phase": "adsorbed",
+     "atom_map": {
+      "O": "O1",
+      "H": "Ht"
+     }
+    }
+   ],
+   "transfer": {
+    "atom": "Ht",
+    "donor": "C1",
+    "acceptor": "O1"
+   },
+   "bond_changes": {
+    "forward": {
+     "breaking": [
+      [
+       "C1",
+       "Ht"
+      ]
+     ],
+     "forming": [
+      [
+       "O1",
+       "Ht"
+      ]
+     ]
+    },
+    "reverse": {
+     "breaking": [
+      [
+       "O1",
+       "Ht"
+      ]
+     ],
+     "forming": [
+      [
+       "C1",
+       "Ht"
+      ]
+     ]
+    }
+   },
+   "scan_coordinates": {
+    "from_is": {
+     "forming_bond": [
+      "O1",
+      "Ht"
+     ],
+     "moving_atom": "Ht",
+     "stop_reference": {
+      "side": "products",
+      "instance": "p_oh",
+      "bond": [
+       "O",
+       "H"
+      ]
+     }
+    },
+    "from_fs": {
+     "forming_bond": [
+      "C1",
+      "Ht"
+     ],
+     "moving_atom": "Ht",
+     "stop_reference": {
+      "side": "reactants",
+      "instance": "r_ch3",
+      "bond": [
+       "C",
+       "H_c"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "entry_schema_version": 2,
+   "id": "T02",
+   "category": "H_TRANSFER",
+   "equation": "OH* + OH* -> H2O* + O*",
+   "enabled": true,
+   "pipeline": "coadsorbed_two_sided",
+   "default_route": "two_sided_single_bond_scan",
+   "requested_direction": "forward",
+   "state_class": "adsorbed_to_adsorbed",
+   "atom_order": [
+    "O1",
+    "Ht",
+    "O2",
+    "H2"
+   ],
+   "reactants": [
+    {
+     "instance": "r_oh1",
+     "species": "OH",
+     "phase": "adsorbed",
+     "atom_map": {
+      "O": "O1",
+      "H": "Ht"
+     }
+    },
+    {
+     "instance": "r_oh2",
+     "species": "OH",
+     "phase": "adsorbed",
+     "atom_map": {
+      "O": "O2",
+      "H": "H2"
+     }
+    }
+   ],
+   "products": [
+    {
+     "instance": "p_h2o",
+     "species": "H2O",
+     "phase": "adsorbed",
+     "atom_map": {
+      "O": "O2",
+      "H_a": "H2",
+      "H_b": "Ht"
+     }
+    },
+    {
+     "instance": "p_o",
+     "species": "O",
+     "phase": "adsorbed",
+     "atom_map": {
+      "O": "O1"
+     }
+    }
+   ],
+   "transfer": {
+    "atom": "Ht",
+    "donor": "O1",
+    "acceptor": "O2"
+   },
+   "bond_changes": {
+    "forward": {
+     "breaking": [
+      [
+       "O1",
+       "Ht"
+      ]
+     ],
+     "forming": [
+      [
+       "O2",
+       "Ht"
+      ]
+     ]
+    },
+    "reverse": {
+     "breaking": [
+      [
+       "O2",
+       "Ht"
+      ]
+     ],
+     "forming": [
+      [
+       "O1",
+       "Ht"
+      ]
+     ]
+    }
+   },
+   "scan_coordinates": {
+    "from_is": {
+     "forming_bond": [
+      "O2",
+      "Ht"
+     ],
+     "moving_atom": "Ht",
+     "stop_reference": {
+      "side": "products",
+      "instance": "p_h2o",
+      "bond": [
+       "O",
+       "H_b"
+      ]
+     }
+    },
+    "from_fs": {
+     "forming_bond": [
+      "O1",
+      "Ht"
+     ],
+     "moving_atom": "Ht",
+     "stop_reference": {
+      "side": "reactants",
+      "instance": "r_oh1",
+      "bond": [
+       "O",
+       "H"
+      ]
+     }
+    }
+   }
+  }
+ ]
+}
