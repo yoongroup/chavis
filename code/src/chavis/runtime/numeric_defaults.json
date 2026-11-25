@@ -1,0 +1,103 @@
+{
+  "schema": "chavis_shared_numeric_defaults_v1",
+  "judgment": {
+    "version": "ni-drm-judgment-numerics-v1",
+    "radii_A": {
+      "H": 0.31,
+      "C": 0.76,
+      "N": 0.71,
+      "O": 0.66,
+      "Ni": 1.24,
+      "Cu": 1.32,
+      "Rh": 1.42
+    },
+    "rules": {
+      "reference_bond_intact_ratio": 1.25,
+      "nonreference_bond_radius_scale": 1.2,
+      "reference_input_radius_scale": 1.5,
+      "near_Ni_radius_scale": 1.2,
+      "detached_Ni_radius_scale": 2.0,
+      "detached_min_height_A": 3.0,
+      "endpoint_fmax_eV_A": 0.01,
+      "ts_fmax_eV_A": 0.005,
+      "imaginary_epsilon_cm1": 1e-06,
+      "curvature_boundary_eV_A2": 0.0,
+      "curvature_comparison": "strictly_less_than",
+      "cell_context_atol_A": 1e-08,
+      "fixed_position_context_atol_A": 1e-06,
+      "boundary_ambiguity_interval_enabled": false,
+      "boundary_ambiguity_ratio_interval": null
+    },
+    "native_automation_frequency": {
+      "delta_A": 0.01,
+      "nfree": 2
+    }
+  },
+  "inputs": {
+    "embed_seed": 61453,
+    "embed_tries": 10,
+    "gas_fmax": 0.02,
+    "gas_steps": 300,
+    "spin_override": {
+      "C": 3
+    },
+    "placeholder": "Cl"
+  },
+  "search": {
+    "idpp_routes": {
+      "legacy_gui_cartesian_idpp_v1": {
+        "mic": false,
+        "fragment_consistent_images": false,
+        "steps": 150,
+        "fmax_eV_A": 0.05
+      },
+      "ni_drm_mic_idpp_v1": {
+        "mic": true,
+        "fragment_consistent_images": true,
+        "steps": 150,
+        "fmax_eV_A": 0.05
+      },
+      "normal_reaction_local_mic_idpp_v1": {
+        "mic": true,
+        "fragment_consistent_images": true,
+        "steps": 150,
+        "fmax_eV_A": 0.05
+      }
+    },
+    "local_geometry": {
+      "surviving_bond_radius_scale": 1.2,
+      "mic_collision_scale": 0.7,
+      "fragment_image_consistency_atol_A": 1e-06,
+      "image_count_min": 3,
+      "image_count_max": 40
+    },
+    "gui_ts_defaults": {
+      "species": "CH3",
+      "site": "fcc",
+      "images": 9,
+      "endpoint_fmax": 0.01,
+      "neb_fmax": 0.03,
+      "ts_fmax": 0.005,
+      "endpoint_steps": 500,
+      "neb_steps": 500,
+      "dimer_steps": 400,
+      "delta": 0.01,
+      "connection_displacement": 0.2,
+      "match_rms": 0.25,
+      "max_fs_trials": 6,
+      "rmin": 1.8,
+      "rmax": 3.0,
+      "half_angle": 30.0
+    },
+    "gui_ts_stage_constants": {
+      "endpoint_bfgs_maxstep_A": 0.15,
+      "neb_fire_dt": 0.05,
+      "neb_fire_maxstep_A": 0.1,
+      "warm_neb_fmax_eV_A": 0.1,
+      "fs_collision_scale": 0.7,
+      "accelerated_inference_parity_tolerance": 0.001,
+      "mode_projection_min_abs": 1e-06
+    },
+    "long_diffusion_opt_in_supported": false
+  }
+}
